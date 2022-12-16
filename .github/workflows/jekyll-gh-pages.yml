@@ -34,7 +34,7 @@ jobs:
         with:
           path: ./404
           clean: true
-      - run: mv 404/index.md index.md
+      - run: mv 404/index.md 404.md
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
