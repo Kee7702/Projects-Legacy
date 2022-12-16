@@ -31,8 +31,9 @@ jobs:
           repository: Kee7702/Kee7702.github.io
       - name: Checkout
         with:
-          path: 404
+          path: ./
           clean: true
+          fetch-depth: 0
         uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v2
