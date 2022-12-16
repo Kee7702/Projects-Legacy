@@ -30,11 +30,11 @@ jobs:
         with:
           repository: Kee7702/Kee7702.github.io
       - name: Checkout
-        with:
-          path: ./
-          clean: true
-          fetch-depth: 0
         uses: actions/checkout@v3
+        with:
+          path: ./404
+          clean: true
+      - run: mv 404/index.md index.md
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
@@ -42,7 +42,7 @@ jobs:
         with:
           source: ./
           destination: ./_site
-      - run: rm -rf 404/workflows
+      - run: rm -rf 404
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
