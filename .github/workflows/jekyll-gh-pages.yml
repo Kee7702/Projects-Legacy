@@ -32,9 +32,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          path: ./404
+          path: ./legacy
           clean: true
-      - run: mv 404/index.md 404.md
+      - run: mv legacy/404.md 404.md
+      - run: mv legacy/_includes/global-announcement-header.html _includes/global-announcement-header.html
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
