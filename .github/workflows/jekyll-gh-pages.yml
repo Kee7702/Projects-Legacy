@@ -34,8 +34,7 @@ jobs:
         with:
           path: ./legacy
           clean: true
-      - run: mv legacy/404.md 404.md
-      - run: mv legacy/_includes/global-announcement-header.html _includes/global-announcement-header.html
+      - run: mv legacy .
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
