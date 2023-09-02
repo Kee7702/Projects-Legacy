@@ -36,6 +36,7 @@ jobs:
           clean: true
       - run: mv legacy/404.md 404.md
       - run: mv legacy/_data/navigation.yml _data/navigation.yml
+      - run: mv legacy/_data/announcements.yml _data/announcements.yml
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
